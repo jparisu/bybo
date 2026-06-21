@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <title>Build It Now — ByBO</title>
+  <meta name="description" content="Answer a few quick questions and ByBO hands you a ready-to-paste prompt and step-by-step instructions to launch your website.">
+  <link rel="icon" type="image/png" href="resources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+      <div class="nav-actions">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#who-we-are">About</a></li>
+          <li><a href="index.html#what-we-do">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="builder.html">Build It</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Builder Hero -->
+  <section class="guide-hero">
+    <div class="container">
+      <h1 class="guide-title">Build It Now</h1>
+      <p class="guide-subtitle">Answer three quick questions — get a ready-to-paste prompt and exact next steps.</p>
+    </div>
+  </section>
+
+  <!-- Wizard -->
+  <section class="guide-content">
+    <div class="container">
+      <div class="wizard" id="wizard">
+
+        <!-- Progress -->
+        <div class="wizard-progress" role="presentation">
+          <div class="wizard-progress-track"><div class="wizard-progress-fill" id="wizProgressFill"></div></div>
+          <span class="wizard-progress-label" id="wizProgressLabel">Step 1 of 3</span>
+        </div>
+
+        <!-- Step 1: Basics -->
+        <article class="wizard-panel active" data-step="0">
+          <span class="step-eyebrow">Step 1 of 3</span>
+          <h2 class="wizard-title">The basics</h2>
+          <p class="wizard-lead">Just two lines. This is everything the AI needs to start.</p>
+
+          <label class="field">
+            <span class="field-label">Your brand / site name</span>
+            <input type="text" id="fName" class="field-input" placeholder="e.g. Lumen Studio" autocomplete="off">
+          </label>
+
+          <label class="field">
+            <span class="field-label">What is it about? (one line)</span>
+            <input type="text" id="fAbout" class="field-input" placeholder="e.g. A photography portfolio for weddings" autocomplete="off">
+          </label>
+
+          <div class="field">
+            <span class="field-label">What kind of site is it?</span>
+            <div class="chip-group" id="fPurpose" role="radiogroup" aria-label="Type of site">
+              <button type="button" class="chip active" data-value="portfolio" role="radio" aria-checked="true">Portfolio</button>
+              <button type="button" class="chip" data-value="business" role="radio" aria-checked="false">Business</button>
+              <button type="button" class="chip" data-value="blog" role="radio" aria-checked="false">Blog</button>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <span></span>
+            <button class="btn btn-primary wizard-next" type="button">Next →</button>
+          </div>
+        </article>
+
+        <!-- Step 2: Style -->
+        <article class="wizard-panel" data-step="1">
+          <span class="step-eyebrow">Step 2 of 3</span>
+          <h2 class="wizard-title">Pick a style</h2>
+          <p class="wizard-lead">Each style sets your colors, font and vibe — you don't need to choose them separately.</p>
+
+          <div class="style-grid" id="fStyle" role="radiogroup" aria-label="Visual style">
+            <button type="button" class="style-card active" data-value="modern" role="radio" aria-checked="true">
+              <span class="style-swatch" style="--s1:#00d4ff;--s2:#0a0e1a"></span>
+              <span class="style-name">Modern</span>
+              <span class="style-desc">Clean, crisp, lots of whitespace</span>
+            </button>
+            <button type="button" class="style-card" data-value="bright" role="radio" aria-checked="false">
+              <span class="style-swatch" style="--s1:#ff6a00;--s2:#1a0d00"></span>
+              <span class="style-name">Bright</span>
+              <span class="style-desc">Vivid, bold, high-energy gradients</span>
+            </button>
+            <button type="button" class="style-card" data-value="sportive" role="radio" aria-checked="false">
+              <span class="style-swatch" style="--s1:#22c55e;--s2:#06140c"></span>
+              <span class="style-name">Sportive</span>
+              <span class="style-desc">Dynamic, angular, athletic</span>
+            </button>
+            <button type="button" class="style-card" data-value="elegant" role="radio" aria-checked="false">
+              <span class="style-swatch" style="--s1:#7c3aed;--s2:#f7f4ff"></span>
+              <span class="style-name">Elegant</span>
+              <span class="style-desc">Refined, premium, serif touches</span>
+            </button>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary wizard-back" type="button">← Back</button>
+            <button class="btn btn-primary wizard-next" type="button">See my plan →</button>
+          </div>
+        </article>
+
+        <!-- Step 3: Result -->
+        <article class="wizard-panel" data-step="2">
+          <span class="step-eyebrow">Step 3 of 3</span>
+          <h2 class="wizard-title">Your plan is ready</h2>
+          <p class="wizard-lead">Follow these steps in order. Everything below is filled in with your choices.</p>
+
+          <div class="plan-summary" id="planSummary"></div>
+
+          <!-- Action 1: Generate in Bolt -->
+          <div class="result-block">
+            <div class="result-head">
+              <span class="result-step-num">1</span>
+              <div>
+                <h3 class="result-title">Generate your site in Bolt</h3>
+                <p class="result-sub">Open Bolt, paste the prompt below, and press send. Wait for it to finish building.</p>
+              </div>
+            </div>
+            <div class="tool-list">
+              <a class="tool-link" href="https://bolt.new" target="_blank" rel="noopener"><span class="tool-name">Open Bolt</span><span class="tool-tag">bolt.new</span></a>
+            </div>
+            <div class="copybox">
+              <div class="copybox-head">
+                <span class="copybox-label">Your prompt</span>
+                <button type="button" class="copy-btn" data-copy-target="promptText">Copy prompt</button>
+              </div>
+              <pre class="copybox-body"><code id="promptText"></code></pre>
+            </div>
+            <div class="step-tip">
+              <span class="step-tip-label">Important — keep it static</span>
+              <p>Bolt often defaults to React. The prompt above tells it <strong>not</strong> to. Your finished project should contain <code>index.html</code>, <code>style.css</code>, <code>script.js</code> and a <code>resources</code> folder — <strong>no</strong> <code>package.json</code> or <code>src/</code> folder. If you see those, reply in Bolt: <em>"Rebuild as plain static HTML, CSS and JS only — no React, no build step."</em></p>
+            </div>
+          </div>
+
+          <!-- Action 2: Download from Bolt -->
+          <div class="result-block">
+            <div class="result-head">
+              <span class="result-step-num">2</span>
+              <div>
+                <h3 class="result-title">Download the files from Bolt</h3>
+                <p class="result-sub">Get the finished project onto your computer as a normal folder.</p>
+              </div>
+            </div>
+            <ul class="step-substeps">
+              <li>In Bolt, find the <strong>Download</strong> button (top-right of the editor) and click it — it saves a <code>.zip</code> file.</li>
+              <li>Open your <strong>Downloads</strong> folder, right-click the <code>.zip</code> and choose <strong>Extract All</strong> (or double-click on Mac) to unzip it.</li>
+              <li>Open the unzipped folder. You should see <code>index.html</code>, <code>style.css</code>, <code>script.js</code> and a <code>resources</code> folder.</li>
+            </ul>
+            <div class="step-tip">
+              <span class="step-tip-label">Check before you upload</span>
+              <p>Double-click <code>index.html</code> — your site should open in the browser straight away. If it does, it's a proper static site and you're ready for GitHub.</p>
+            </div>
+          </div>
+
+          <!-- Action 3: Create repo + upload -->
+          <div class="result-block">
+            <div class="result-head">
+              <span class="result-step-num">3</span>
+              <div>
+                <h3 class="result-title">Create a GitHub repo and upload the folder</h3>
+                <p class="result-sub">Make a free repository, then drag your files straight in — no terminal needed.</p>
+              </div>
+            </div>
+            <p class="result-sub" style="margin-bottom:.6rem">Suggested repository name:</p>
+            <div class="inline-copy">
+              <code id="repoName" class="inline-code"></code>
+              <button type="button" class="copy-btn copy-btn-sm" data-copy-target="repoName">Copy name</button>
+            </div>
+            <ul class="step-substeps">
+              <li>Go to <strong>github.com/new</strong>, paste the name above, keep it <strong>Public</strong>, and click <strong>Create repository</strong>.</li>
+              <li>On the new repo page, click <strong>Add file → Upload files</strong>.</li>
+              <li>Open your unzipped folder and <strong>select everything inside it</strong> — <code>index.html</code>, <code>style.css</code>, <code>script.js</code> and the <code>resources</code> folder — then drag them onto the GitHub page.</li>
+              <li>Click <strong>Commit changes</strong>.</li>
+            </ul>
+            <div class="tool-list">
+              <a class="tool-link" href="https://github.com/new" target="_blank" rel="noopener"><span class="tool-name">New repository</span><span class="tool-tag">github.com/new</span></a>
+              <a class="tool-link" href="https://desktop.github.com" target="_blank" rel="noopener"><span class="tool-name">GitHub Desktop</span><span class="tool-tag">Drag-and-drop app</span></a>
+            </div>
+            <div class="step-tip">
+              <span class="step-tip-label">Watch out</span>
+              <p>Drag the files that are <strong>inside</strong> the folder, not the folder itself — <code>index.html</code> must sit at the top level of the repository, or your site won't open.</p>
+            </div>
+          </div>
+
+          <!-- Action 4: Publish -->
+          <div class="result-block">
+            <div class="result-head">
+              <span class="result-step-num">4</span>
+              <div>
+                <h3 class="result-title">Publish it for free</h3>
+                <p class="result-sub">Turn the repo into a live website with GitHub Pages.</p>
+              </div>
+            </div>
+            <ul class="step-substeps">
+              <li>Open <strong>Settings → Pages</strong> in your repository.</li>
+              <li>Set <strong>Source</strong> to "Deploy from a branch", pick <strong>main</strong> and <strong>/ (root)</strong>, then <strong>Save</strong>.</li>
+            </ul>
+            <label class="field field-tight">
+              <span class="field-label">Your GitHub username (to preview your link)</span>
+              <input type="text" id="fUser" class="field-input" placeholder="your-username" autocomplete="off">
+            </label>
+            <div class="inline-copy">
+              <code id="liveUrl" class="inline-code"></code>
+              <button type="button" class="copy-btn copy-btn-sm" data-copy-target="liveUrl">Copy URL</button>
+            </div>
+          </div>
+
+          <!-- Action 5: Customize -->
+          <div class="result-block">
+            <div class="result-head">
+              <span class="result-step-num">5</span>
+              <div>
+                <h3 class="result-title">Tweak it (optional)</h3>
+                <p class="result-sub">Edit the text, images and colors any time in a free code editor.</p>
+              </div>
+            </div>
+            <div class="tool-list">
+              <a class="tool-link" href="https://code.visualstudio.com" target="_blank" rel="noopener"><span class="tool-name">VS Code</span><span class="tool-tag">Code editor</span></a>
+              <a class="tool-link" href="https://www.cursor.com" target="_blank" rel="noopener"><span class="tool-name">Cursor</span><span class="tool-tag">AI code editor</span></a>
+              <a class="tool-link" href="https://unsplash.com" target="_blank" rel="noopener"><span class="tool-name">Unsplash</span><span class="tool-tag">Free images</span></a>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary wizard-back" type="button">← Back</button>
+            <button class="btn btn-secondary wizard-restart" type="button">Start over</button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="guide-cta fade-in">
+        <h3>Want the full story behind each step?</h3>
+        <p>The guide explains the why and the tools in more depth.</p>
+        <a href="guide.html" class="btn btn-primary btn-large">Open the Full Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+          <p>A free, step-by-step guide to building and publishing your own website.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="guide.html">The Guide</a></li>
+            <li><a href="builder.html">Build It</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Free Tools</h4>
+          <ul>
+            <li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a></li>
+            <li><a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="index.html#project">About the Project</a></li>
+            <li><a href="https://www.cunef.edu" target="_blank" rel="noopener">CUNEF Universidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ByBO — an educational project for the Summer School on AI at CUNEF Universidad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

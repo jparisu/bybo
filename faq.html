@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <title>FAQ — ByBO</title>
+  <meta name="description" content="Frequently asked questions about ByBO, a free step-by-step guide to building your own website.">
+  <link rel="icon" type="image/png" href="resources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+      <div class="nav-actions">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#who-we-are">About</a></li>
+          <li><a href="index.html#what-we-do">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="builder.html">Build It</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FAQ Hero -->
+  <section class="guide-hero">
+    <div class="container">
+      <h1 class="guide-title">Frequently Asked Questions</h1>
+      <p class="guide-subtitle">Honest answers about what ByBO is — and what it isn't</p>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="section">
+    <div class="container">
+      <div class="faq">
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">Is ByBO really free?</h3>
+          <p class="faq-answer">Yes. ByBO is a guide, and every tool it recommends — a code editor, your web browser, and hosting such as GitHub Pages — is free to use. There is nothing to buy and no subscription.</p>
+        </div>
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">Do I need to know how to code?</h3>
+          <p class="faq-answer">No prior experience is needed. The guide introduces HTML, CSS and JavaScript a little at a time, so you learn the basics as you build your own site.</p>
+        </div>
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">What do I need to get started?</h3>
+          <p class="faq-answer">A computer, a web browser, and a free code editor such as Visual Studio Code. That's it — you can begin straight away.</p>
+        </div>
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">Who owns the website I build?</h3>
+          <p class="faq-answer">You do. You write the files and keep them on your own computer. You can host them anywhere, change them whenever you want, and you are never locked in.</p>
+        </div>
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">Does ByBO host my site for me?</h3>
+          <p class="faq-answer">No. ByBO shows you how to publish your site yourself using free hosting such as GitHub Pages, so you stay in full control of where it lives.</p>
+        </div>
+
+        <div class="faq-item fade-in">
+          <h3 class="faq-question">Is this an official product I can buy?</h3>
+          <p class="faq-answer">No. ByBO is an educational project created for the Summer School on AI at CUNEF Universidad. It exists to teach, not to sell — there is nothing to purchase.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="guide-cta fade-in">
+        <h3>Still curious?</h3>
+        <p>The best way to understand ByBO is to work through the guide.</p>
+        <a href="guide.html" class="btn btn-primary btn-large">Open the Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+          <p>A free, step-by-step guide to building and publishing your own website.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="guide.html">The Guide</a></li>
+            <li><a href="builder.html">Build It</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Free Tools</h4>
+          <ul>
+            <li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a></li>
+            <li><a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="index.html#project">About the Project</a></li>
+            <li><a href="https://www.cunef.edu" target="_blank" rel="noopener">CUNEF Universidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ByBO — an educational project for the Summer School on AI at CUNEF Universidad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

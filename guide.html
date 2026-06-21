@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <title>How It Works — ByBO</title>
+  <link rel="icon" type="image/png" href="resources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+      <div class="nav-actions">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#who-we-are">About</a></li>
+          <li><a href="index.html#what-we-do">Features</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="builder.html">Build It</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Guide Hero -->
+  <section class="guide-hero">
+    <div class="container">
+      <h1 class="guide-title">How to Build Your Brand Online</h1>
+      <p class="guide-subtitle">A step-by-step guide to launching your digital presence</p>
+    </div>
+  </section>
+
+  <!-- Interactive Stepper -->
+  <section class="guide-content">
+    <div class="container">
+      <div class="stepper" id="stepper">
+        <!-- Left rail: list of steps -->
+        <aside class="stepper-rail" aria-label="Steps">
+          <button class="rail-item" type="button" data-step="0">
+            <span class="rail-number">1</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>
+            <span class="rail-label">Choose Your Topic</span>
+          </button>
+          <button class="rail-item" type="button" data-step="1">
+            <span class="rail-number">2</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+            <span class="rail-label">Choose Your Brand Name</span>
+          </button>
+          <button class="rail-item" type="button" data-step="2">
+            <span class="rail-number">3</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="19" cy="17" r="2"></circle><circle cx="6" cy="12" r="3"></circle></svg></span>
+            <span class="rail-label">Choose Your Colors</span>
+          </button>
+          <button class="rail-item" type="button" data-step="3">
+            <span class="rail-number">4</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></span>
+            <span class="rail-label">Choose Your Style</span>
+          </button>
+          <button class="rail-item" type="button" data-step="4">
+            <span class="rail-number">5</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>
+            <span class="rail-label">Generate Your Template</span>
+          </button>
+          <button class="rail-item" type="button" data-step="5">
+            <span class="rail-number">6</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></span>
+            <span class="rail-label">Customize with AI</span>
+          </button>
+          <button class="rail-item" type="button" data-step="6">
+            <span class="rail-number">7</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+            <span class="rail-label">Open in VS Code</span>
+          </button>
+          <button class="rail-item" type="button" data-step="7">
+            <span class="rail-number">8</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line></svg></span>
+            <span class="rail-label">Upload to GitHub</span>
+          </button>
+          <button class="rail-item" type="button" data-step="8">
+            <span class="rail-number">9</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></span>
+            <span class="rail-label">Publish with GitHub Pages</span>
+          </button>
+          <div class="rail-progress" role="presentation">
+            <div class="rail-progress-track"><div class="rail-progress-fill"></div></div>
+            <span class="rail-progress-label">Step 1 of 9</span>
+          </div>
+          <div class="rail-divider"><span>Optional · later</span></div>
+          <button class="rail-item rail-item-future" type="button" data-step="9">
+            <span class="rail-number">+</span>
+            <span class="rail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span>
+            <span class="rail-label">Add a Server</span>
+          </button>
+        </aside>
+
+        <!-- Right panel: expanded detail for the selected step -->
+        <div class="stepper-panels">
+
+          <!-- Step 1 -->
+          <article class="step-panel" data-step="0">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 1 of 9</span>
+                <span class="step-panel-title">Choose Your Topic</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Define what your website is about. Whether it's a portfolio, business site, blog, or e-commerce store — knowing your focus helps shape every decision that follows. Consider your audience, your goals, and what success looks like for you.</p>
+              <ul class="step-substeps">
+                <li>Identify who your website is for — your audience.</li>
+                <li>Decide its main purpose: portfolio, business, blog, or shop.</li>
+                <li>Summarise it all in one clear sentence.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Write this sentence down. Every later choice — name, colors, style — should trace back to it.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://chatgpt.com" target="_blank" rel="noopener"><span class="tool-name">ChatGPT</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://claude.ai" target="_blank" rel="noopener"><span class="tool-name">Claude</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://gemini.google.com" target="_blank" rel="noopener"><span class="tool-name">Gemini</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://www.perplexity.ai" target="_blank" rel="noopener"><span class="tool-name">Perplexity</span><span class="tool-tag">AI research</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button" disabled>← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step-panel" data-step="1">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 2 of 9</span>
+                <span class="step-panel-title">Choose Your Brand Name</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Your brand name is your digital identity. Make it memorable, easy to spell, and available as a domain. Use our AI-powered name generator to explore creative options that resonate with your vision and stand out in your industry.</p>
+              <ul class="step-substeps">
+                <li>Brainstorm at least 10 candidate names.</li>
+                <li>Check that the matching domain (.com / .io) is free.</li>
+                <li>Say each one out loud — is it easy to spell and remember?</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Shorter is almost always better. Avoid hyphens and numbers — they're easy to mistype.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://namelix.com" target="_blank" rel="noopener"><span class="tool-name">Namelix</span><span class="tool-tag">AI name generator</span></a>
+                  <a class="tool-link" href="https://chatgpt.com" target="_blank" rel="noopener"><span class="tool-name">ChatGPT</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://claude.ai" target="_blank" rel="noopener"><span class="tool-name">Claude</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://instantdomainsearch.com" target="_blank" rel="noopener"><span class="tool-name">Instant Domain Search</span><span class="tool-tag">Domain check</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step-panel" data-step="2">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r="2.5"></circle>
+                  <circle cx="19" cy="17" r="2"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 3 of 9</span>
+                <span class="step-panel-title">Choose Your Colors</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Colors evoke emotion and convey personality. Select a palette that reflects your brand's essence — bold and energetic, calm and trustworthy, or modern and minimal. Our AI suggests harmonious color schemes based on your industry and preferences.</p>
+              <ul class="step-substeps">
+                <li>Pick one primary accent color that captures your personality.</li>
+                <li>Add a neutral background — light or dark — for contrast.</li>
+                <li>Limit yourself to 2–3 colors total.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Pick one main accent color and let it lead. Keep the whole palette to two or three colors — more than that quickly starts to look messy.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://color.adobe.com/create/color-wheel" target="_blank" rel="noopener"><span class="tool-name">Adobe Color</span><span class="tool-tag">Color wheel</span></a>
+                  <a class="tool-link" href="https://coolors.co" target="_blank" rel="noopener"><span class="tool-name">Coolors</span><span class="tool-tag">Palette generator</span></a>
+                  <a class="tool-link" href="https://www.realtimecolors.com" target="_blank" rel="noopener"><span class="tool-name">Realtime Colors</span><span class="tool-tag">Live preview</span></a>
+                  <a class="tool-link" href="https://www.khroma.co" target="_blank" rel="noopener"><span class="tool-name">Khroma</span><span class="tool-tag">AI colors</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="step-panel" data-step="3">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 4 of 9</span>
+                <span class="step-panel-title">Choose Your Style</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Define the visual language of your site. Minimalist or bold? Classic or avant-garde? Browse through curated style templates or let our AI analyze your preferences to recommend the perfect aesthetic direction for your brand.</p>
+              <ul class="step-substeps">
+                <li>Choose a vibe: minimal, bold, classic, or playful.</li>
+                <li>Pick one font family and stick to it.</li>
+                <li>Decide on spacing: airy and roomy, or tight and dense.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Consistency beats variety. Reusing the same spacing and font sizes is what makes a site look professional.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://fonts.google.com" target="_blank" rel="noopener"><span class="tool-name">Google Fonts</span><span class="tool-tag">Fonts</span></a>
+                  <a class="tool-link" href="https://www.fontpair.co" target="_blank" rel="noopener"><span class="tool-name">Fontpair</span><span class="tool-tag">Font pairing</span></a>
+                  <a class="tool-link" href="https://www.figma.com" target="_blank" rel="noopener"><span class="tool-name">Figma</span><span class="tool-tag">Design / mockups</span></a>
+                  <a class="tool-link" href="https://dribbble.com" target="_blank" rel="noopener"><span class="tool-name">Dribbble</span><span class="tool-tag">Inspiration</span></a>
+                  <a class="tool-link" href="https://www.awwwards.com" target="_blank" rel="noopener"><span class="tool-name">Awwwards</span><span class="tool-tag">Inspiration</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5 -->
+          <article class="step-panel" data-step="4">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 5 of 9</span>
+                <span class="step-panel-title">Generate Your Template</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Use an AI app builder like Bolt to turn your inputs into a real website. Feed it your topic, name, colors and style — but be explicit that you want a <strong>static</strong> site: plain HTML, CSS and JavaScript only. When you're happy, download the project so you can publish it yourself.</p>
+              <ul class="step-substeps">
+                <li>Tell the builder to make a <strong>static site — only HTML, CSS and JS</strong>, with <strong>no React, no framework and no build step</strong>.</li>
+                <li>Review the generated layout, then iterate with feedback until it matches your vision.</li>
+                <li>Download the finished project (Bolt has a <strong>Download</strong> button that saves a <code>.zip</code>), then unzip it on your computer.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Important — keep it static</span>
+                <p>Builders like Bolt often default to React. You want plain static files instead. Your finished folder should hold <code>index.html</code>, <code>style.css</code>, <code>script.js</code> and a <code>resources</code> folder — with <strong>no</strong> <code>package.json</code> or <code>src/</code> folder. If you see those, ask the builder to "rebuild as plain static HTML, CSS and JS only — no React, no build step." A real static site opens just by double-clicking <code>index.html</code>.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://bolt.new" target="_blank" rel="noopener"><span class="tool-name">Bolt</span><span class="tool-tag">Recommended builder</span></a>
+                  <a class="tool-link" href="https://claude.ai" target="_blank" rel="noopener"><span class="tool-name">Claude</span><span class="tool-tag">AI chatbot</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 6 -->
+          <article class="step-panel" data-step="5">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 6 of 9</span>
+                <span class="step-panel-title">Customize with AI</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Fine-tune your design with AI assistance. Adjust layouts, swap images, refine copy, and add interactive elements. Simply describe what you want in plain English, and watch the changes happen in real-time. No coding required.</p>
+              <ul class="step-substeps">
+                <li>Describe changes in plain English ("make the hero darker").</li>
+                <li>Swap placeholder images and text for your real content.</li>
+                <li>Preview on both desktop and mobile widths.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Change one thing at a time, so you can see exactly what each tweak does.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://www.cursor.com" target="_blank" rel="noopener"><span class="tool-name">Cursor</span><span class="tool-tag">AI code editor</span></a>
+                  <a class="tool-link" href="https://github.com/features/copilot" target="_blank" rel="noopener"><span class="tool-name">GitHub Copilot</span><span class="tool-tag">AI coding agent</span></a>
+                  <a class="tool-link" href="https://claude.ai" target="_blank" rel="noopener"><span class="tool-name">Claude</span><span class="tool-tag">AI chatbot</span></a>
+                  <a class="tool-link" href="https://unsplash.com" target="_blank" rel="noopener"><span class="tool-name">Unsplash</span><span class="tool-tag">Free images</span></a>
+                  <a class="tool-link" href="https://tinypng.com" target="_blank" rel="noopener"><span class="tool-name">TinyPNG</span><span class="tool-tag">Compress images</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 7 -->
+          <article class="step-panel" data-step="6">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 7 of 9</span>
+                <span class="step-panel-title">Open in VS Code</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Editing your own files is where it all comes together. Open your project folder in VS Code — a free, friendly code editor — and tweak the HTML, CSS and JavaScript directly. No terminal needed: everything happens through menus and buttons.</p>
+              <ul class="step-substeps">
+                <li>Download and install VS Code — it's free.</li>
+                <li>Open your project with <strong>File → Open Folder</strong>, then pick your website folder.</li>
+                <li>Install the <strong>Live Preview</strong> extension to watch your site update as you type.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Save often. With Live Preview open beside your code, every change shows up instantly — no need to refresh the browser.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://code.visualstudio.com" target="_blank" rel="noopener"><span class="tool-name">Visual Studio Code</span><span class="tool-tag">Code editor</span></a>
+                  <a class="tool-link" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server" target="_blank" rel="noopener"><span class="tool-name">Live Preview</span><span class="tool-tag">VS Code extension</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 8 -->
+          <article class="step-panel" data-step="7">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                  <polyline points="16 16 12 12 8 16"></polyline>
+                  <line x1="12" y1="12" x2="12" y2="21"></line>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 8 of 9</span>
+                <span class="step-panel-title">Upload to GitHub</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Now put your files online so they're safe and ready to publish. GitHub stores your project for free — and you can upload everything without ever touching a terminal. Use the website's drag-and-drop, or the GitHub Desktop app.</p>
+              <ul class="step-substeps">
+                <li>Create a free account at <strong>github.com</strong> and click <strong>New</strong> to make a repository.</li>
+                <li>Easiest way: open your repo and choose <strong>Add file → Upload files</strong>, then drag in your <code>index.html</code>, <code>style.css</code>, <code>script.js</code> and the <code>resources</code> folder.</li>
+                <li>Prefer an app? Install <strong>GitHub Desktop</strong>, add your project folder, and click <strong>Publish</strong> — no commands required.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Make sure <code>index.html</code> sits at the top level of the repository — that's the page your website will open on.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://github.com" target="_blank" rel="noopener"><span class="tool-name">GitHub</span><span class="tool-tag">Code hosting</span></a>
+                  <a class="tool-link" href="https://desktop.github.com" target="_blank" rel="noopener"><span class="tool-name">GitHub Desktop</span><span class="tool-tag">Upload app · no terminal</span></a>
+                  <a class="tool-link" href="https://docs.github.com/repositories/working-with-files/managing-files/adding-a-file-to-a-repository" target="_blank" rel="noopener"><span class="tool-name">Upload files (guide)</span><span class="tool-tag">How-to</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <button class="step-next" type="button">Next step →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 9 -->
+          <article class="step-panel" data-step="8">
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2L11 13"></path>
+                  <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow">Step 9 of 9</span>
+                <span class="step-panel-title">Publish with GitHub Pages</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">Turn your repository into a real, public website with GitHub Pages — free hosting, no terminal and no cost. A few clicks in your repository settings and your site is live for the world to see.</p>
+              <ul class="step-substeps">
+                <li>In your repository, open <strong>Settings → Pages</strong>.</li>
+                <li>Under <strong>Build and deployment</strong>, set <strong>Source</strong> to "Deploy from a branch".</li>
+                <li>Pick the <strong>main</strong> branch and the <strong>/ (root)</strong> folder, then click <strong>Save</strong>.</li>
+                <li>Wait a moment — your site goes live at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>It can take a minute or two the first time. Refresh the page if your site isn't there yet.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools you can use</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://pages.github.com" target="_blank" rel="noopener"><span class="tool-name">GitHub Pages</span><span class="tool-tag">Free hosting</span></a>
+                  <a class="tool-link" href="https://docs.github.com/pages" target="_blank" rel="noopener"><span class="tool-name">GitHub Pages docs</span><span class="tool-tag">Setup guide</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <a href="index.html" class="step-next step-finish">Finish ✓</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Optional / Future: Add a Server -->
+          <article class="step-panel is-future" data-step="9" data-future>
+            <button class="step-panel-header" type="button">
+              <span class="step-panel-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </span>
+              <span class="step-panel-heading">
+                <span class="step-eyebrow step-eyebrow-future">Optional · future work</span>
+                <span class="step-panel-title">Add a Server</span>
+              </span>
+              <span class="step-chevron" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="step-panel-body">
+              <p class="step-description">GitHub Pages is perfect for a site made of HTML, CSS and JavaScript. The day your project needs to do more — handle form submissions, user logins, or a database — you'll want a host that can run server code. That's a project for another day, but here's where to look.</p>
+              <ul class="step-substeps">
+                <li>Keep using GitHub Pages until you actually need a server.</li>
+                <li>When you do, hosts like Netlify or Vercel can run backend code and connect to a database.</li>
+                <li>Both have free tiers and link straight to your GitHub repository.</li>
+              </ul>
+              <div class="step-tip">
+                <span class="step-tip-label">Tip</span>
+                <p>Don't reach for a server too early. Most personal and brand sites never need one.</p>
+              </div>
+              <div class="step-tools">
+                <span class="step-tools-label">Tools for later</span>
+                <div class="tool-list">
+                  <a class="tool-link" href="https://www.netlify.com" target="_blank" rel="noopener"><span class="tool-name">Netlify</span><span class="tool-tag">Server hosting</span></a>
+                  <a class="tool-link" href="https://vercel.com" target="_blank" rel="noopener"><span class="tool-name">Vercel</span><span class="tool-tag">Server hosting</span></a>
+                </div>
+              </div>
+              <div class="step-nav">
+                <button class="step-back" type="button">← Back</button>
+                <a href="index.html" class="step-next step-finish">Done ✓</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="guide-cta fade-in">
+        <h3>Ready to Start Building?</h3>
+        <p>Open your code editor and work through the steps at your own pace.</p>
+        <a href="index.html" class="btn btn-primary btn-large">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
+          <p>A free, step-by-step guide to building and publishing your own website.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="guide.html">The Guide</a></li>
+            <li><a href="builder.html">Build It</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Free Tools</h4>
+          <ul>
+            <li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a></li>
+            <li><a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="index.html#project">About the Project</a></li>
+            <li><a href="https://www.cunef.edu" target="_blank" rel="noopener">CUNEF Universidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ByBO — an educational project for the Summer School on AI at CUNEF Universidad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
