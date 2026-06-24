@@ -19,11 +19,29 @@
       <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
       <div class="nav-actions">
         <ul class="nav-links" id="navLinks">
-          <li><a href="#who-we-are">About</a></li>
-          <li><a href="#what-we-do">Features</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="guide.html">Guide</a></li>
-          <li><a href="builder.html">Build It</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Home
+              <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#who-we-are">About</a></li>
+              <li><a href="#what-we-do">Features</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Features
+              <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="guide.html">Guide</a></li>
+              <li><a href="builder.html">Build It</a></li>
+              <li><a href="brand.html">Brand</a></li>
+            </ul>
+          </li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
@@ -93,7 +111,7 @@
   <section class="section" id="what-we-do">
     <div class="container">
       <h2 class="section-title">Features</h2>
-      <p class="section-subtitle">Two ways to go from idea to a live website — pick the one that fits you.</p>
+      <p class="section-subtitle">Everything you need to go from idea to a live, on-brand website.</p>
       <div class="cards-grid">
         <a href="guide.html" class="card card-link fade-in">
           <div class="card-icon">
@@ -116,6 +134,18 @@
           <h3 class="card-title">Build-It Form</h3>
           <p class="card-text">Answer three quick questions and the form instantly hands you a ready-to-paste AI prompt, a suggested repo name and your future site link — plus the exact steps to generate, download, upload and publish.</p>
           <span class="card-cta">Try the Builder →</span>
+        </a>
+        <a href="brand.html" class="card card-link fade-in">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13.5" cy="6.5" r="2.5"></circle>
+              <circle cx="19" cy="17" r="2"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="card-title">Anatomy of a Brand</h3>
+          <p class="card-text">The five things every brand must have — name, color palette, logo, typography and style. See each one explained through ByBO's own brand, in an interactive grid.</p>
+          <span class="card-cta">Explore the Brand →</span>
         </a>
       </div>
     </div>
@@ -157,6 +187,7 @@
     <div class="container">
       <h2 class="section-title">An Educational Project</h2>
       <p class="section-subtitle">Created for the Summer School on AI at CUNEF Universidad</p>
+      <p class="section-subtitle">by <a href="https://github.com/jparisu" target="_blank" rel="noopener">jparisu</a></p>
       <div class="sponsors-grid sponsors-single fade-in">
         <a class="sponsor-logo sponsor-logo-img" href="https://www.cunef.edu" target="_blank" rel="noopener">
           <img src="resources/cunef.png" alt="CUNEF Universidad">
@@ -180,6 +211,7 @@
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="guide.html">The Guide</a></li>
             <li><a href="builder.html">Build It</a></li>
+            <li><a href="brand.html">Brand</a></li>
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
@@ -196,6 +228,7 @@
           <ul>
             <li><a href="#project">About the Project</a></li>
             <li><a href="https://www.cunef.edu" target="_blank" rel="noopener">CUNEF Universidad</a></li>
+            <li><a href="https://github.com/jparisu/ByBO" target="_blank" rel="noopener">GitHub Repository</a></li>
           </ul>
         </div>
       </div>

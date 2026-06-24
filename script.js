@@ -69,6 +69,7 @@
     mobileToggle.addEventListener('click', function() {
       navLinks.classList.toggle('active');
       this.classList.toggle('active');
+      closeDropdowns();
 
       // Animate hamburger to X
       const spans = this.querySelectorAll('span');
@@ -95,6 +96,55 @@
       });
     });
   }
+
+  // ========================================
+  // NAVBAR DROPDOWN MENUS (Home / Features)
+  // ========================================
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+  function closeDropdowns(except) {
+    dropdowns.forEach(function(d) {
+      if (d === except) return;
+      d.classList.remove('open');
+      const t = d.querySelector('.nav-dropdown-toggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  dropdowns.forEach(function(dropdown) {
+    const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const willOpen = !dropdown.classList.contains('open');
+      closeDropdowns(dropdown);
+      dropdown.classList.toggle('open', willOpen);
+      toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+
+    // Close the dropdown after picking an item
+    dropdown.querySelectorAll('.nav-dropdown-menu a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
+  // Close any open dropdown when clicking outside the navbar
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      closeDropdowns();
+    }
+  });
+
+  // Close dropdowns with the Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDropdowns();
+    }
+  });
 
   // ========================================
   // SMOOTH SCROLL FOR ANCHOR LINKS

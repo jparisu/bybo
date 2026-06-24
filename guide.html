@@ -18,11 +18,29 @@
       <a href="index.html" class="logo"><img src="resources/bybo_icon.png" alt=""><span>ByBO</span></a>
       <div class="nav-actions">
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html#who-we-are">About</a></li>
-          <li><a href="index.html#what-we-do">Features</a></li>
-          <li><a href="index.html#how-it-works">How It Works</a></li>
-          <li><a href="guide.html">Guide</a></li>
-          <li><a href="builder.html">Build It</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Home
+              <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#who-we-are">About</a></li>
+              <li><a href="index.html#what-we-do">Features</a></li>
+              <li><a href="index.html#how-it-works">How It Works</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Features
+              <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="guide.html">Guide</a></li>
+              <li><a href="builder.html">Build It</a></li>
+              <li><a href="brand.html">Brand</a></li>
+            </ul>
+          </li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode">
@@ -580,6 +598,7 @@
             <li><a href="index.html#how-it-works">How It Works</a></li>
             <li><a href="guide.html">The Guide</a></li>
             <li><a href="builder.html">Build It</a></li>
+            <li><a href="brand.html">Brand</a></li>
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
@@ -596,6 +615,7 @@
           <ul>
             <li><a href="index.html#project">About the Project</a></li>
             <li><a href="https://www.cunef.edu" target="_blank" rel="noopener">CUNEF Universidad</a></li>
+            <li><a href="https://github.com/jparisu/ByBO" target="_blank" rel="noopener">GitHub Repository</a></li>
           </ul>
         </div>
       </div>
